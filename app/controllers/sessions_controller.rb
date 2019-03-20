@@ -6,7 +6,9 @@ class SessionsController < ApplicationController
     session[:name] = params[:name]
     if (!session[:name])
       redirect_to "/new"
-    redirect_to '/'
+    else
+      redirect_to '/'
+    end
   end
 
   def destroy
